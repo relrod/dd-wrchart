@@ -1,0 +1,30 @@
+name:                dd-wrgraph
+version:             0.1.0.0
+synopsis:            Graph your bandwidth usage from DD-WRT's backup format.
+-- description:
+homepage:            https://github.com/relrod/dd-wrgraph
+license:             BSD2
+license-file:        LICENSE
+author:              Ricky Elrod
+maintainer:          ricky@elrod.me
+copyright:           (c) 2014 Ricky Elrod
+category:            Network
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable dd-wrgraph
+  main-is:             Main.hs
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       attoparsec >= 0.11 && < 0.13
+                     , base >= 4 && < 5
+                     , bytestring >= 0.10 && < 0.11
+                     , Chart
+                     , Chart-diagrams >= 1.3 && < 2
+                     , lens >= 4.5 && < 4.8
+                     , parsers >= 0.12.1 && < 0.13
+                     , wreq >= 0.3 && < 0.4
+
+  -- hs-source-dirs:
+  default-language:    Haskell2010
